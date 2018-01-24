@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            say(){
+                console.log('我的名字是'+this.name);
+            }
+            static haha(){
+                console.log('hahaha');
+            }
+        }
+        class Child extends Person{
+            constructor(name,age,school){
+                super(name,age);
+                this.school = school;
+            }
+            eat(){
+                console.log('我吃奶'+this.school);
+            }
+        }
+        let p1 = new Person('laowang',33);
+        p1.say();
+        let p2 = new Child('xiaowang',13,'sunschool');
+        p2.say();
+        p2.eat();      
+        Person.haha(); 
+        Child.haha(); 
+        
+
+    </script>
+</body>
+</html>
